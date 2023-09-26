@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "f4421479-9a02-4425-83b8-8e0deb302ffa",
+		"name": "RefKafkaApp.ConsumerService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "923648"
+	},
+	"item": [
+		{
+			"name": "ConsumerConfig",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumberConsumer}}/config",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumberConsumer}}",
+					"path": [
+						"config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsumerMessages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumberConsumer}}/messages",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumberConsumer}}",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
