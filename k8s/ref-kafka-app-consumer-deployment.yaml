@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ref-kafka-app-consumer-deployment
+  name: ref-kafka-app-consumer-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ref-kafka-app-consumer-deployment
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: ref-kafka-app-consumer-deployment
+    spec:
+      containers:
+      - image: quay.io/tonydawson1000/ref-kafka-app-consumer:0.2
+        name: ref-kafka-app-consumer-deployment
+        resources: {}
+status: {}
