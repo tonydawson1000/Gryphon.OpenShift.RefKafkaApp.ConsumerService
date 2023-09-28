@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ref-kafka-app-consumer-deployment
+  name: ref-kafka-app-consumer-deployment
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: ref-kafka-app-consumer-deployment
+  type: NodePort
+status:
+  loadBalancer: {}
